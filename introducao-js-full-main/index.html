@@ -68,27 +68,30 @@
 						</tr>
 					</tbody>
 				</table>
-
+				<br>
+				<h2>Paciente</h2>
+				<form action="" id="Adiciona">
+					<div class="grupo">
+						<label for="">Nome</label>
+						<input type="text" name="nome" class="campo" id="nomeId">
+					</div>
+					<div class="grupo">
+						<label for="">Peso</label>
+						<input type="number" name="peso" class="campo" id="pesoId">
+					</div>
+					<div class="grupo">
+						<label for="">Altura</label>
+						<input type="number" name="altura" class="campo" id="alturaId">
+					</div>
+					<div class="grupo">
+						<label for="">Gordura</label>
+						<input type="number" name="gordura" class="campo" id="gorduraId">
+					</div>	
+				</form>
+				<button id="Add">Click Aqui!</button>
 			</section>
 		</main>
-		<script>
-			var Nome = document.querySelector(".info-nome").textContent;
-			var peso = document.querySelector(".info-peso"), altura = document.querySelector(".info-altura"), gordura = document.querySelector(".info-gordura"), imc = document.querySelector(".info-imc");
-			var titulo = document.querySelector(".titulo");
-			var paciente = document.querySelectorAll(".paciente");
-			titulo.textContent = "Bizarro😱😱😱😱";	
-
-			for (let i = 0; i < paciente.length; i++) {
-				let peso = parseFloat(paciente[i].querySelector(".info-peso").textContent);
-				let altura = parseFloat(paciente[i].querySelector(".info-altura").textContent);
-
-				let imc = peso / (altura * altura);
-
-				paciente[i].querySelector(".info-imc").textContent = imc.toFixed(2);
-				console.log(i)
-			}
-			
-		</script>
+		<script src="script.js"></script>
 
 	</body>
 </html>
